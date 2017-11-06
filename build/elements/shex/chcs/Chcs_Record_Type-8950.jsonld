@@ -1,0 +1,11 @@
+{
+  "@context": "https://raw.githubusercontent.com/mappinghub/mappings/master/ont/context.jsonld",
+  "name": "Chcs_Record_Type-8950",
+  "author": {
+    "name": "Glenna Mayo",
+    "email": "glenna.hokukahu@gmail.com"
+  },
+  "type": "chcss:Chcs_Record_Type-8950",
+  "description": "CHCS Chcs_Record_Type-8950 element",
+  "documentation": "http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Chcs_Record_Type-8950.htm"
+}

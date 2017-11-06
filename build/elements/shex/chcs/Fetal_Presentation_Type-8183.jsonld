@@ -1,0 +1,12 @@
+{
+  "@context": "https://raw.githubusercontent.com/mappinghub/mappings/master/ont/context.jsonld",
+  "name": "Fetal_Presentation_Type-8183",
+  "author": {
+    "name": "Glenna Mayo",
+    "email": "glenna.hokukahu@gmail.com"
+  },
+  "type": "chcss:Fetal_Presentation_Type-8183",
+  "description": "The data stored in this schema contains a table (code and description) of fetal presentation types that are categorized by \"LIVEBIRTH\" and \"FETAL DEATH\"",
+  "documentation": "http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Fetal_Presentation_Type-8183.htm",
+  "sampleData": "https://github.com/rdf-pipeline/translators/blob/master/data/samples/Fetal_Presentation_Type-8183.jsonld"
+}

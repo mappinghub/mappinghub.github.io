@@ -1,0 +1,12 @@
+{
+  "@context": "https://raw.githubusercontent.com/mappinghub/mappings/master/ont/context.jsonld",
+  "name": "User-3",
+  "author": {
+    "name": "Glenna Mayo",
+    "email": "glenna.hokukahu@gmail.com"
+  },
+  "type": "chcss:User-3",
+  "description": "The data stored in this schema contains data used to control the various users of the CHCS system",
+  "documentation": "http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/User-3.htm",
+  "sampleData": "https://github.com/rdf-pipeline/translators/blob/master/data/samples/User-3.jsonld"
+}

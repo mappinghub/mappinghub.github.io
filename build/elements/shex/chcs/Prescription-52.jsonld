@@ -1,0 +1,12 @@
+{
+  "@context": "https://raw.githubusercontent.com/mappinghub/mappings/master/ont/context.jsonld",
+  "name": "Prescription-52",
+  "author": {
+    "name": "Glenna Mayo",
+    "email": "glenna.hokukahu@gmail.com"
+  },
+  "type": "chcss:Prescription-52",
+  "description": "The data stored in this schema contains all outpatient RX data used by the outpatient pharmacy package",
+  "documentation": "http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Prescription-52.htm",
+  "sampleData": "https://github.com/rdf-pipeline/translators/blob/master/data/samples/Prescription-52.jsonld"
+}

@@ -1,0 +1,12 @@
+{
+  "@context": "https://raw.githubusercontent.com/mappinghub/mappings/master/ont/context.jsonld",
+  "name": "Ancillary_Procedure-108_1",
+  "author": {
+    "name": "Glenna Mayo",
+    "email": "glenna.hokukahu@gmail.com"
+  },
+  "type": "chcss:Ancillary_Procedure-108_1",
+  "description": "The data stored in this schema defines those procedures which are not included in the automated ancillaries",
+  "documentation": "http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Ancillary_Procedure-108_1.htm",
+  "sampleData": "https://github.com/rdf-pipeline/translators/blob/master/data/samples/Ancillary_Procedure-108_1.jsonld"
+}
