@@ -144,7 +144,10 @@ var createDropdown = function (settings) {
 };
 
 
+
+
 $(function(){
+
   $.ajax({
     url: 'build/elements.jsonld',
     dataType: 'json',
@@ -168,26 +171,55 @@ $(function(){
     dataType: 'json',
     success: function (response) {
       window.mappings = response;
-      $('#mappings-table').DataTable({
-        "data": response,
-        "columns": [
-          { "title":"Translations Available", "fnSelect": createMapOption, "data": returnDataForTranslations },
-          { "title":"Source Model", "data": "maps.0.source"},
-          { "title":"Target Model", "data": "maps.0.target"},
-          { "title":"Name", "data":"name",  "fnCreatedCell":createLinkCell },
-          { "title":"Translator Language", "data":"mappingLanguage" },
-          { "title":"Description", "data":"description", "disableSelect": true },
-	  // { "title":"Author", "data":"author", "disableSelect": true }
-        ],
-        "initComplete": createDropdown
-      });
+        $('#mappings-table').DataTable({
+            colReorder: true,
+            "data": response,
+            "columns": [
+                { "title":"Translations Available", "fnSelect": createMapOption, "data": returnDataForTranslations, "visible": false },
+                { "title":"Source Model", "data": "maps.0.source"},
+                { "title":"Target Model", "data": "maps.0.target"},
+                { "title":"Name", "data":"name",  "fnCreatedCell":createLinkCell },
+                { "title":"Translator Language", "data":"mappingLanguage" },
+                { "title":"Description", "data":"description", "disableSelect": true },
+                // { "title":"Author", "data":"author", "disableSelect": true }
+            ],
+            "initComplete": createDropdown
+        });
     }
   });
   $(".nav-tabs a").click(function (e) {
     $(this).tab('show');
     e.preventDefault();
   });
-  $('#tableTabs a:first').tab('show')
+  $('#tableTabs a:first').tab('show');
 
+    document.querySelectorAll('a.toggle-vis').forEach((el) => {
+        el.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            let table1 = $('#mappings-table').DataTable();
+            let columnIdx = e.target.getAttribute('data-column');
+            let column = table1.column(columnIdx);
+
+            // Toggle the visibility
+            column.visible(!column.visible());
+        });
+    });
+
+
+    document.querySelectorAll('a.toggle-vis2').forEach((el) => {
+        el.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            let table2 = $('#elements-table').DataTable();
+            let columnIdx = e.target.getAttribute('data-column');
+            let column2 = table2.column(columnIdx);
+
+
+            // Toggle the visibility
+            column2.visible(!column2.visible());
+        });
+    });
 
 });
+
