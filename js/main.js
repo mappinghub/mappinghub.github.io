@@ -59,6 +59,27 @@ var returnDataForTranslations = function( row, type, set, meta ){
     return row.map;
 };
 
+
+var returnMetadata = function(row, type, set, meta ){
+    if (type === "type"){
+        return "string"; // force type detection to string, since that's what we use for filter
+    }
+    else if (type === 'display') {
+        var output = JSON.stringify(row) + "\n";
+        return output;
+    }
+    else if (type === 'filter') {
+        var output = JSON.stringify(row) + "\n";
+        return output;
+    }
+    else if (type === 'sort') {
+        return row.maps[0].source.charCodeAt(0);
+    }
+    else if (type === undefined) //for api call
+        return row;
+    else
+        return row;
+};
 //            "fnCreatedCell": createMapCell,
 //
 //            "fnSearch": searchMapOption
@@ -181,7 +202,7 @@ $(function(){
                 { "title":"Name", "data":"name",  "fnCreatedCell":createLinkCell },
                 { "title":"Translator Language", "data":"mappingLanguage" },
                 { "title":"Description", "data":"description", "disableSelect": true },
-                // { "title":"Author", "data":"author", "disableSelect": true }
+                { "title":"Metadata", "data":returnMetadata, "disableSelect": true, "visible": false }
             ],
             "initComplete": createDropdown
         });
